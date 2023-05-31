@@ -7,5 +7,8 @@ console.log("Routes");
 
 router.post("/upload", upload.single("file"), uploadImage);
 router.get("/file/:fileId", downloadImage);
+router.get("/test", (req,res)=> {
+    res.send('ok')
+});
 
 export default router;
