@@ -25,6 +25,6 @@ export const downloadImage = async (request, response) => {
     response.download(file.path, file.name);
   } catch (error) {
     console.error(error.message);
-    return response.status(500).json({ error: error.message });
+    return response.status(500).json({ error: error.message, id:request.params.fileId });
   }
 };
