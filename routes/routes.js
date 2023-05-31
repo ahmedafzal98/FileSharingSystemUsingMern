@@ -4,11 +4,11 @@ import upload from "../utils/upload.js";
 
 const router = express.Router();
 console.log("Routes");
-
-router.post("/upload", upload.single("file"), uploadImage);
-router.get("/file/:fileId", downloadImage);
 router.get("/", (req,res)=> {
     res.send('ok')
 });
+
+router.post("/upload", upload.single("file"), uploadImage);
+router.get("/file/:fileId", downloadImage);
 
 export default router;
