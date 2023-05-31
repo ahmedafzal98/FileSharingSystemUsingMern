@@ -8,7 +8,7 @@ console.log("Ahmed");
 app.use(cors());
 app.use('/',router)
 
-const PORT = 8000
+const PORT = process.env.PORT || 8000
 
 DBConnection();
 
