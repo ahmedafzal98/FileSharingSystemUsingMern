@@ -9,6 +9,6 @@ router.get("/", (req,res)=> {
 });
 
 // router.post("/upload", upload.single("file"), uploadImage);
-// router.get("/file/:fileId", downloadImage);
+router.get("/file/:fileId", downloadImage);
 
 export default router;
